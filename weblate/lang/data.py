@@ -384,8 +384,8 @@ PLURAL_NAMES = {
         pgettext_lazy("Plural form description", "Other"),
     ),
     PLURAL_ONE_FEW_MANY: (
-        pgettext_lazy("Plural form description", "One"),
-        pgettext_lazy("Plural form description", "Few"),
-        pgettext_lazy("Plural form description", "Many"),
+        pgettext_lazy("Plural form description", "Make agree as singular"),
+        pgettext_lazy("Plural form description", "Make agree as genitive singular"),
+        pgettext_lazy("Plural form description", "Make agree as genitive plural"),
     ),
 }
