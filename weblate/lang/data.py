@@ -384,8 +384,8 @@ PLURAL_NAMES = {
         pgettext_lazy("Plural form description", "Other"),
     ),
     PLURAL_ONE_FEW_MANY: (
-        pgettext_lazy("Plural form description", "One"),
-        pgettext_lazy("Plural form description", "Few"),
-        pgettext_lazy("Plural form description", "Many"),
+        pgettext_lazy("Plural form description", "Sponen ending with One"),
+        pgettext_lazy("Plural form description", "Spoken ending with 2, 3 or 4"),
+        pgettext_lazy("Plural form description", "Sopken ending with 5 to 9"),
     ),
 }
