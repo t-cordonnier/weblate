@@ -124,3 +124,9 @@ class DuplicateCheckTest(CheckTestCase):
                 MockUnit(),
             )
         )
+
+    def test_check_disabled(self):
+        self.assertTrue(self._run_check("ਠਹਿਰ ਠਹਿਰ ਕੇ", lang="pa"))
+        self.assertTrue(self._run_check("رہ رہ کے", lang="pa"))
+        self.assertFalse(self._run_check("ਠਹਿਰ ਠਹਿਰ ਕੇ", lang="fa"))
+        self.assertFalse(self._run_check("رہ رہ کے", lang="fa"))

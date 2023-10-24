@@ -23,6 +23,11 @@ IGNORES = {
     "sq": {"të"},
 }
 
+# Languages for which duplicate words are frequent,
+# so better to disable the feature completely
+# Note: this is for target language, not source!
+DISABLE = ["pa"]
+
 
 class DuplicateCheck(TargetCheck):
     """Check for duplicated tokens."""
@@ -53,8 +58,10 @@ class DuplicateCheck(TargetCheck):
         return groups, words
 
     def check_single(self, source, target, unit):
-        source_code = unit.translation.component.source_language.base_code
         lang_code = unit.translation.language.base_code
+        if lang_code in DISABLE:
+            return set()
+        source_code = unit.translation.component.source_language.base_code
 
         source_groups, source_words = self.extract_groups(
             strip_format(source, unit.all_flags),
